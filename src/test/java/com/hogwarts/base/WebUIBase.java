@@ -16,7 +16,7 @@ public abstract class WebUIBase {
     private String propFileName = "iselenium.properties";
 
     protected String testcaseName = "";
-    protected String curBrowser = "firefox"; //默认浏览器是firefox
+    protected String curBrowser = "chrome"; //默认浏览器是firefox
     protected WebDriver driver;
     protected WebDriver.Navigation navigation;
     protected String firefoxPath = "";
@@ -90,7 +90,7 @@ public abstract class WebUIBase {
         try {
             prop = new Properties();
             InputStream in = new BufferedInputStream(
-                    new FileInputStream(path + File.separator + propFileName));
+                    new FileInputStream("D:\\javaCode\\iSelenium\\src\\test\\resources\\"+propFileName));
             prop.load(in);
             in.close();
         } catch (IOException ioex) {
